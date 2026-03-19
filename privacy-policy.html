@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — SecondBrain</title>
+  <style>
+    :root {
+      --bg: #08071A;
+      --surface: #1A1740;
+      --elevated: #241F55;
+      --primary: #8B5CF6;
+      --teal: #2DD4BF;
+      --text1: #F4F3FF;
+      --text2: #B8B3D8;
+      --text3: #9A95B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text2);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 1rem 4rem;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--elevated);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    header h1 {
+      color: var(--text1);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header .app-name {
+      color: var(--primary);
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .updated {
+      color: var(--text3);
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: var(--text1);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--elevated);
+    }
+    h3 {
+      color: var(--text1);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p { margin-bottom: 0.9rem; }
+    ul { padding-left: 1.4rem; margin-bottom: 0.9rem; }
+    li { margin-bottom: 0.4rem; }
+    .highlight {
+      background: var(--elevated);
+      border-left: 3px solid var(--teal);
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+      color: var(--text1);
+      font-size: 0.95rem;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .placeholder {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: var(--text3);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="app-name">SecondBrain</div>
+    <h1>Privacy Policy</h1>
+  </header>
+
+  <div class="container">
+    <p class="updated">Ultimo aggiornamento: <span class="placeholder">[DATA ENTRATA IN VIGORE]</span></p>
+
+    <div class="highlight">
+      La versione breve: i tuoi ricordi vengono cifrati sul tuo dispositivo e salvati nel tuo Google Drive personale. Noi non li vediamo mai. L'unica elaborazione esterna avviene tramite API AI (Google e Anthropic) nel momento in cui crei un ricordo, per estrarne le informazioni chiave.
+    </div>
+
+    <h2>1. Titolare del Trattamento</h2>
+    <p>
+      Il titolare del trattamento dei dati personali è <span class="placeholder">[NOME O RAGIONE SOCIALE]</span>,
+      con sede in <span class="placeholder">[INDIRIZZO]</span>.
+    </p>
+    <p>
+      Per qualsiasi domanda relativa alla privacy puoi contattarci all'indirizzo:
+      <a href="mailto:[EMAIL_CONTATTO]" class="placeholder">[EMAIL_CONTATTO]</a>
+    </p>
+
+    <h2>2. Dati Raccolti</h2>
+
+    <h3>2.1 Dati di autenticazione Google</h3>
+    <p>
+      Per accedere all'app utilizzi il tuo account Google. Riceviamo da Google i seguenti dati:
+    </p>
+    <ul>
+      <li>Identificativo univoco Google (Google Sub)</li>
+      <li>Indirizzo email</li>
+      <li>Nome visualizzato e foto profilo</li>
+      <li>Token di accesso ai servizi Google autorizzati</li>
+    </ul>
+    <p>
+      Questi dati non vengono mai trasferiti a server nostri. Vengono utilizzati esclusivamente
+      sul tuo dispositivo per derivare la chiave di cifratura e per accedere ai servizi Google autorizzati.
+    </p>
+
+    <h3>2.2 I tuoi ricordi (contenuto dell'app)</h3>
+    <p>
+      Il testo che inserisci nell'app costituisce i tuoi ricordi personali. Questi dati:
+    </p>
+    <ul>
+      <li>Vengono <strong>cifrati sul tuo dispositivo</strong> con AES-256-GCM prima di qualsiasi trasmissione</li>
+      <li>Vengono archiviati <strong>esclusivamente nel tuo Google Drive personale</strong>, in una cartella riservata all'app invisibile nell'interfaccia normale di Drive</li>
+      <li>Non vengono mai trasmessi a server di SecondBrain</li>
+      <li>Sono accessibili solo a te, tramite la chiave derivata dal tuo account Google</li>
+    </ul>
+
+    <h3>2.3 Dati trasmessi ai servizi AI</h3>
+    <p>
+      Quando crei un ricordo, il testo viene temporaneamente trasmesso — in forma non cifrata — alle API dei seguenti servizi AI per l'elaborazione:
+    </p>
+    <ul>
+      <li><strong>Google Gemini API</strong> (Google LLC): per estrarre entità, generare titolo, sommario, categorie e creare l'embedding vettoriale del testo</li>
+      <li><strong>Anthropic Claude API</strong> (Anthropic PBC): per gli utenti Premium, per rispondere a domande complesse sui tuoi ricordi</li>
+    </ul>
+    <p>
+      Questi dati vengono elaborati e non vengono conservati dai fornitori AI per periodi superiori a quelli previsti dai loro termini di servizio.
+      Ti invitiamo a leggere le informative di <a href="https://policies.google.com/privacy" target="_blank">Google</a>
+      e di <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic</a>.
+    </p>
+
+    <h3>2.4 Dati importati da Gmail e Google Calendar</h3>
+    <p>
+      Se autorizzi l'accesso a Gmail e Google Calendar, l'app importa automaticamente contenuti selezionati
+      (email con risposta, eventi del calendario passati) e li elabora tramite le API AI di cui al punto 2.3
+      per creare ricordi strutturati. Puoi eliminare questi ricordi in qualsiasi momento dall'app.
+    </p>
+    <p>
+      L'accesso a Gmail e Calendar è in sola lettura. L'app non invia, modifica né elimina email o eventi.
+    </p>
+
+    <h3>2.5 Dati di diagnostica e analytics</h3>
+    <p>
+      Per migliorare la stabilità e la qualità dell'app utilizziamo:
+    </p>
+    <ul>
+      <li>
+        <strong>Sentry</strong> (Functional Software, Inc.): raccoglie automaticamente informazioni sui crash dell'app,
+        inclusi stack trace, versione del sistema operativo e del dispositivo. Non contiene dati personali o contenuti dei ricordi.
+        I dati sono elaborati su server in Europa (Germania). <a href="https://sentry.io/privacy/" target="_blank">Privacy Policy Sentry</a>
+      </li>
+      <li>
+        <strong>PostHog</strong> (PostHog Inc.): raccoglie metriche aggregate e anonime sull'utilizzo dell'app
+        (es. numero di ricordi creati, frequenza di utilizzo delle funzioni). Nessun contenuto personale.
+        I dati sono elaborati su server in Europa (UE). <a href="https://posthog.com/privacy" target="_blank">Privacy Policy PostHog</a>
+      </li>
+    </ul>
+
+    <h2>3. Finalità e Basi Giuridiche del Trattamento</h2>
+    <ul>
+      <li><strong>Esecuzione del contratto (Art. 6(1)(b) GDPR):</strong> autenticazione, cifratura, sincronizzazione — necessari per fornire il servizio</li>
+      <li><strong>Interesse legittimo (Art. 6(1)(f) GDPR):</strong> diagnostica crash e analytics anonimi per migliorare la qualità dell'app</li>
+      <li><strong>Consenso (Art. 6(1)(a) GDPR):</strong> accesso a Gmail e Google Calendar — revocabile in qualsiasi momento</li>
+    </ul>
+
+    <h2>4. Conservazione dei Dati</h2>
+    <p>
+      I ricordi rimangono nel tuo Google Drive finché non li elimini tu. Se elimini il tuo account Google o
+      revochi l'accesso all'app, i dati rimangono nel tuo Drive finché non li elimini manualmente.
+    </p>
+    <p>
+      I dati di diagnostica Sentry vengono conservati per 90 giorni. I dati analytics PostHog
+      vengono conservati per 12 mesi in forma aggregata.
+    </p>
+
+    <h2>5. Trasferimento Internazionale dei Dati</h2>
+    <p>
+      Le API AI (Google Gemini, Anthropic Claude) possono elaborare dati su server negli Stati Uniti.
+      Questi trasferimenti avvengono nel rispetto delle garanzie previste dal GDPR (Clausole Contrattuali Standard
+      o decisioni di adeguatezza). Sentry e PostHog elaborano i dati su server europei.
+    </p>
+
+    <h2>6. I Tuoi Diritti (GDPR)</h2>
+    <p>In qualità di interessato hai il diritto di:</p>
+    <ul>
+      <li><strong>Accesso:</strong> sapere quali dati trattiamo</li>
+      <li><strong>Rettifica:</strong> correggere dati inesatti</li>
+      <li><strong>Cancellazione:</strong> richiedere la cancellazione dei tuoi dati ("diritto all'oblio")</li>
+      <li><strong>Portabilità:</strong> ricevere i tuoi dati in formato strutturato</li>
+      <li><strong>Opposizione:</strong> opporti al trattamento per interesse legittimo</li>
+      <li><strong>Revoca del consenso:</strong> revocare in qualsiasi momento il consenso all'accesso Gmail/Calendar da Google Account → Sicurezza → App con accesso al tuo account</li>
+    </ul>
+    <p>
+      Per esercitare i tuoi diritti scrivi a
+      <a href="mailto:[EMAIL_CONTATTO]" class="placeholder">[EMAIL_CONTATTO]</a>.
+      Hai inoltre il diritto di proporre reclamo all'autorità di controllo del tuo Paese
+      (in Italia: <a href="https://www.garanteprivacy.it" target="_blank">Garante per la protezione dei dati personali</a>).
+    </p>
+
+    <h2>7. Sicurezza</h2>
+    <p>
+      I tuoi ricordi sono protetti da cifratura AES-256-GCM con chiave derivata localmente sul dispositivo.
+      Il database locale dell'app è cifrato con SQLCipher. L'app supporta l'accesso con Face ID, Touch ID o PIN.
+      Nessun dato in chiaro transita su server di SecondBrain.
+    </p>
+
+    <h2>8. Minori</h2>
+    <p>
+      L'app non è destinata a persone di età inferiore ai 13 anni. Non raccogliamo consapevolmente
+      dati di minori. Se ritieni che un minore abbia utilizzato l'app, contattaci per la cancellazione dei dati.
+    </p>
+
+    <h2>9. Modifiche alla Privacy Policy</h2>
+    <p>
+      Eventuali modifiche sostanziali alla presente informativa verranno comunicate tramite un avviso
+      nell'app. La versione aggiornata sarà sempre disponibile a questo indirizzo.
+    </p>
+
+    <h2>10. Contatti</h2>
+    <p>
+      <span class="placeholder">[NOME O RAGIONE SOCIALE]</span><br />
+      <span class="placeholder">[INDIRIZZO]</span><br />
+      <a href="mailto:[EMAIL_CONTATTO]" class="placeholder">[EMAIL_CONTATTO]</a>
+    </p>
+  </div>
+
+  <footer>
+    &copy; <span class="placeholder">[ANNO]</span> SecondBrain. Tutti i diritti riservati.
+  </footer>
+</body>
+</html>
